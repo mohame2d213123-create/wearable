@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pharos — Alexandria Bracelet Watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand">Pharos<span>.</span></div>
+        <div class="sub">Alexandria Bracelet Watch</div>
+      </div>
+      <div class="sub" id="conn-indicator">—</div>
+    </header>
+
+    <div class="hero" id="hero">
+      <div class="beacon offline" id="beacon">
+        <div class="beacon-sweep"></div>
+        <div class="beacon-core"></div>
+      </div>
+      <div class="status-word offline" id="status-word">CONNECTING</div>
+      <div class="last-seen" id="last-seen">waiting for first check-in…</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="lbl">Pulse sensor</div>
+        <div class="val" id="val-hr">—</div>
+      </div>
+      <div class="card">
+        <div class="lbl">Satellites</div>
+        <div class="val" id="val-sats">—</div>
+      </div>
+      <div class="card">
+        <div class="lbl">GPS lock</div>
+        <div class="val" id="val-lock">—</div>
+      </div>
+    </div>
+
+    <div class="map-card">
+      <div id="map-slot"><div class="map-empty">no location fix yet</div></div>
+      <div class="coords-row">
+        <span id="coord-lat">lat —</span>
+        <span id="coord-lon">lon —</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="primary" id="btn-locate">Request location now</button>
+      <button class="danger" id="btn-ack" disabled>Acknowledge alert</button>
+    </div>
+    <div class="hint">Pharos polls the bracelet's last check-in every 3 seconds.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

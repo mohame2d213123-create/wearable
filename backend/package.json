@@ -1,0 +1,9 @@
+{
+  "name": "pharos-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Netlify Functions backend for the Alexandria bracelet (Pharos dashboard)",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
